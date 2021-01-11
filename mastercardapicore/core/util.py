@@ -92,9 +92,9 @@ def uriRfc3986Encode(value):
     RFC 3986 encodes the value
     """
     encoded = quote_plus(value)
-    encoded = str.replace(encoded, '+', '%20')
-    encoded = str.replace(encoded, '*', '%2A')
-    encoded = str.replace(encoded, '~', '%7E')
+    encoded = encoded.replace('+', '%20')
+    encoded = encoded.replace('*', '%2A')
+    encoded = encoded.replace('~', '%7E')
     return encoded
 
 
